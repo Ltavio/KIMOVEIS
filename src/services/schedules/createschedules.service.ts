@@ -44,7 +44,7 @@ const createSchedulesService = async (
   }
 
   if (!searchPropertie) {
-    throw new AppError(400, "Properties not found");
+    throw new AppError(404, "Properties not found");
   }
 
   if (!searchUser) {
