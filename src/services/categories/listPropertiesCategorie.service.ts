@@ -21,7 +21,7 @@ const listPropertiesCategoriesService = async (id: string) => {
     element.category.id === id;
   });
 
-  return { ...searchCategory, filterListPropertie };
+  return { filterListPropertie: filterListPropertie, ...searchCategory };
 };
 
 export default listPropertiesCategoriesService;
