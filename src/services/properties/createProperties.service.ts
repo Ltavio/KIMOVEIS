@@ -10,19 +10,27 @@ const createPropertiesService = async ({
   size,
   address,
   categoryId,
-}: IPropertyRequest): Promise<Properties[]> => {
+}: IPropertyRequest): Promise<Properties> => {
   const propertiesRepo = AppDataSource.getRepository(Properties);
   const addressRepo = AppDataSource.getRepository(Addresses);
   const categoriesRepo = AppDataSource.getRepository(Categories);
 
   const { district, zipCode, number, city, state }: IAddressRequest = address;
 
-  const searchAddress = await addressRepo.findOneBy({
-    zipCode,
-  });
-
-  if (searchAddress) {
-    throw new AppError(400, "address already registered");
+  const verifyProperty = await propertiesRepo.findOneBy({ addresses: address });
+  const verifyAddresss = await addressRepo.findOneBy({ zipCode: zipCode });
+  const verifyCategory = await categoriesRepo.findOneBy({ id: categoryId });
+  if (zipCode.length > 8) {
+    throw new AppError(400, "Invalid ZipCode");
+  }
+  if (verifyProperty) {
+    throw new AppError(400, "Property already exists");
+  }
+  if (!verifyCategory) {
+    throw new AppError(404, "category not found");
+  }
+  if (verifyAddresss) {
+    throw new AppError(400, "Address already registred");
   }
 
   const addresses = addressRepo.create({
@@ -35,19 +43,12 @@ const createPropertiesService = async ({
 
   await addressRepo.save(addresses);
 
-  const searchCategories = await categoriesRepo.findOneBy({
-    id: categoryId,
+  const properties = propertiesRepo.create({
+    value: value,
+    size: size,
+    addresses: addresses,
+    category: verifyCategory,
   });
-
-  if (!searchCategories) {
-    throw new AppError(400, "category not found");
-  }
-
-  /*   const properties = new Properties()
-  properties.value = value
-  properties.size = size
-  properties.addresses = addresses
-  properties. */
 
   await propertiesRepo.save(properties);
 
