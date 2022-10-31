@@ -8,7 +8,7 @@ const createCategoryController = async (req: Request, res: Response) => {
 
     const category = await createCategoryService(data);
 
-    return res.status(200).json(category);
+    return res.status(201).json(category);
   } catch (error) {
     if (error instanceof AppError) {
       handleError(error, res);

@@ -14,7 +14,6 @@ proportiesRouter.post(
   ensureIsAdmAuthMiddle,
   createPropertiesController
 );
-proportiesRouter.get("/:id/properties", listPropertiesCategorieController);
 proportiesRouter.get("/", listPropertiesController);
 
 export default proportiesRouter;
