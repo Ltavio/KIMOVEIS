@@ -5,6 +5,7 @@
 Nesse projeto foi desenvolvido um serviço de back-end responsável por gerenciar uma imobiliária. Com cadastramento de usuários, criação de categoria de imóveis, cadastramento de um imóvel e agendamento de visita aos imóveis.
 
 ## Tecnologias utilizadas:
+
 - NodeJS
 - ExpressJS
 - typeORM
