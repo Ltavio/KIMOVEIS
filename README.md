@@ -8,15 +8,15 @@ Nesse projeto foi desenvolvido um serviço de back-end responsável por gerencia
 
 ##Endpoints do serviço:
 
-Método	         Endpoint	           Responsabilidade
+Método	         Endpoint	           Responsabilidade </br>
 POST	           /users	            Criação de usuário </br>
-GET	             /users	            Lista todos os usuários
-PATCH	           /users	            Atualiza um usuário
-DELETE	         /users/<id>	      Realiza um soft delete no usuário
-POST	           /login	            Gera o token de autenticação
-POST	           /categories	      Criação de categoria
-GET	             /categories/<id>/properties	Lista todos imóveis que pertencem a uma categoria
-POST	           /properties	      Criação de um imóvel
-GET	             /properties	      Lista todos os imóveis
-POST	           /schedules	        Agenda uma visita a um imóvel
-GET	             /schedules/properties/<id>	  lista todos os agendamentos de um imóvel
+GET	             /users	            Lista todos os usuários </br>
+PATCH	           /users	            Atualiza um usuário </br>
+DELETE	         /users/<id>	      Realiza um soft delete no usuário </br>
+POST	           /login	            Gera o token de autenticação </br>
+POST	           /categories	      Criação de categoria </br>
+GET	             /categories/<id>/properties	Lista todos imóveis que pertencem a uma categoria </br>
+POST	           /properties	      Criação de um imóvel </br>
+GET	             /properties	      Lista todos os imóveis </br>
+POST	           /schedules	        Agenda uma visita a um imóvel </br>
+GET	             /schedules/properties/<id>	  lista todos os agendamentos de um imóvel </br>
