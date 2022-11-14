@@ -2,6 +2,23 @@
 
 Nesse projeto foi desenvolvido um serviço de back-end responsável por gerenciar uma imobiliária. Com cadastramento de usuários, criação de categoria de imóveis, cadastramento de um imóvel e agendamento de visita aos imóveis.
 
+## Tecnologias utilizadas:
+- NodeJS
+- ExpressJS
+- typeORM
+- Typescript
+- Docker
+- Jest
+- sqlite3
+- bcrypt
+- jsonwebtoken
+- supertest
+- uuid
+- class-transformer
+- ts-node-dev
+- express-async-errors
+- pg
+
 ## Diagrama da aplicação:
 
 ![DER-KImoveis](https://user-images.githubusercontent.com/96259892/201732543-9730d60e-69ba-4253-b5b2-a1b206ea2056.png)
