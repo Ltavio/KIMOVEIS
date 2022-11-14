@@ -20,3 +20,12 @@ POST	           /properties	      Criação de um imóvel </br>
 GET	             /properties	      Lista todos os imóveis </br>
 POST	           /schedules	        Agenda uma visita a um imóvel </br>
 GET	             /schedules/properties/<id>	  lista todos os agendamentos de um imóvel </br>
+
+<table width="500" align="center" bgcolor="#eeff60">
+    <caption>Produtos</caption>
+    <thead>
+        <tr>
+            <th>Produto</th>
+        </tr>
+    </thead>
+</table>
