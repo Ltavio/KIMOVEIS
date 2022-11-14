@@ -94,3 +94,9 @@ Nesse projeto foi desenvolvido um serviço de back-end responsável por gerencia
         </tr>
     </tbody>
 </table>
+
+### Para inicializar a aplicação:
+
+````
+yarn dev
+````
