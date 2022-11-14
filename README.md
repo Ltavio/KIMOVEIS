@@ -9,7 +9,7 @@ Nesse projeto foi desenvolvido um serviço de back-end responsável por gerencia
 ##Endpoints do serviço:
 
 Método	         Endpoint	           Responsabilidade
-POST	           /users	            Criação de usuário
+POST	           /users	            Criação de usuário </br>
 GET	             /users	            Lista todos os usuários
 PATCH	           /users	            Atualiza um usuário
 DELETE	         /users/<id>	      Realiza um soft delete no usuário
